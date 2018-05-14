@@ -1,6 +1,6 @@
 {
     "name": "venikman",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "CLI portfolio.",
     "homepage": "https://github.com/venikman/venikman",
     "main": "index.js",

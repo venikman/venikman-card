@@ -8,7 +8,7 @@ const ui = importJsx('./index');
 
 meow(`
 	Usage
-	  $ sindresorhus
+	  $ venikman
 `);
 
 render(h(ui));
