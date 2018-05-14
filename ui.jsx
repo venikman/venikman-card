@@ -1,4 +1,7 @@
 'use strict';
+
+/* eslint id-length: ["off"] */
+
 const { h, Text } = require('ink');
 const Gradient = require('ink-gradient');
 const SelectInput = require('ink-select-input');
