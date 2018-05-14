@@ -1,6 +1,6 @@
 {
     "name": "venikman",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "CLI portfolio.",
     "homepage": "https://github.com/venikman/venikman",
     "main": "index.js",
@@ -28,7 +28,7 @@
         "venikman" : "cli.js"
     },
     "files": [
-        "index.js",
+        "ui.jsx",
         "cli.js"
     ],
     "dependencies": {
@@ -55,7 +55,8 @@
     ],
     "xo": {
         "extends": [
-            "xo-react"
+            "tidy",
+            "tidy-react"
         ],
         "settings": {
             "react": {
