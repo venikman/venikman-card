@@ -1,6 +1,6 @@
 {
     "name": "venikman",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "CLI portfolio.",
     "homepage": "https://github.com/venikman/venikman",
     "main": "index.js",
@@ -24,7 +24,9 @@
         "node": ">=7.6"
     },
     "license": "MPL-2.0",
-    "bin": "cli.js",
+    "bin": {
+        "venikman" : "cli.js"
+    },
     "files": [
         "index.js",
         "cli.js"
