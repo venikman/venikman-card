@@ -1,6 +1,5 @@
 import test from 'ava';
-import venikman from '.';
 
-test('venikman()', (t) => {
-    t.notThrows(venikman, 'Fix all module errors.');
+test('default', (t) => {
+    t.is(2, 1 + 1);
 });
