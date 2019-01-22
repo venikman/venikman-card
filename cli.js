@@ -4,13 +4,10 @@ const meow = require('meow');
 const chalk = require('chalk');
 const enquirer = require('enquirer');
 const opn = require('opn');
-const envy = require('envy');
 
-const env = envy();
-const lib = require('lib')({ token : env.token });
+const lib = require('lib')({ token : 'XVYmO6ZbSVvZOUkdZolAf5xXppdcNwZz5KOL2UIbSPrOA6IY94dGy79aNH-WJbNC' });
 
-const sms = lib.utils.sms['@1.0.9'];
-const { phoneNumber } = env;
+const sms = lib.venikman.sms['@dev'];
 
 meow(`
 Usage
@@ -61,13 +58,9 @@ start().then(async (res) => {
         };
         const answer = await enquirer.prompt(smsForm);
         const { name, message } = answer.form;
-
         try {
-            await sms({
-                to   : phoneNumber,
-                body : `From ${name}. ${message}.`
-            });
-            console.log(`hello ${name}, I am venikman. I got your message.`);
+            const re = await sms(name, message);
+            console.log(re);
         }
         catch (error) {
             console.log('We got problem to send a Message.');
