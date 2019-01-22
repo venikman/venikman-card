@@ -4,19 +4,18 @@ const meow = require('meow');
 const chalk = require('chalk');
 const enquirer = require('enquirer');
 const opn = require('opn');
-const Lib = require('lib')
 const envy = require('envy');
+
+const env = envy();
+const lib = require('lib')({ token : env.token });
+
+const sms = lib.utils.sms['@1.0.9'];
+const { phoneNumber } = env;
 
 meow(`
 Usage
 $ venikman
 `);
-
-const env = envy();
-const lib = Lib({ token : env.token });
-const sms = lib.utils.sms['@1.0.9'];
-const { phoneNumber } = env;
-
 
 const start = async () => {
     const chooseLinks = {
@@ -48,16 +47,20 @@ start().then(async (res) => {
     }
     if (res.answer.includes('SMS')) {
         const smsForm = {
-            name: 'form',
-            type: 'form',
-            message: 'Please provide your information:',
-            choices: [
-                { name: 'name', message: 'Yout name', initial: 'name...' },
-                { name: 'message', message: 'Sms text', initial: 'tell me something' }
+            name    : 'form',
+            type    : 'form',
+            message : 'Please provide your information:',
+            choices : [
+                { name    : 'name',
+                    message : 'Yout name',
+                    initial : 'name...' },
+                { name    : 'message',
+                    message : 'Sms text',
+                    initial : 'tell me something' }
             ]
         };
         const answer = await enquirer.prompt(smsForm);
-        const { name, message } =answer.form;
+        const { name, message } = answer.form;
 
         try {
             await sms({
