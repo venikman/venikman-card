@@ -1,4 +1,4 @@
-# venikman [![Build status for venikman on Circle CI.](https://img.shields.io/circleci/project/venikman/venikman/master.svg "Circle Build Status")](https://circleci.com/gh/venikman/venikman "Venikman Builds")
+# venikman [![Build Status](https://travis-ci.org/venikman/venikman.svg?branch=master)](https://travis-ci.org/venikman/venikman)
 
 > CLI portfolio.
 
