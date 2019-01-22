@@ -50,13 +50,7 @@
     ],
     "xo": {
         "extends": [
-            "tidy",
-            "tidy-react"
-        ],
-        "settings": {
-            "react": {
-                "pragma": "h"
-            }
-        }
+            "tidy"
+        ]
     }
 }
