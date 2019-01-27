@@ -5,9 +5,11 @@ const chalk = require('chalk');
 const enquirer = require('enquirer');
 const opn = require('opn');
 
-const lib = require('lib')({ token : 'XVYmO6ZbSVvZOUkdZolAf5xXppdcNwZz5KOL2UIbSPrOA6IY94dGy79aNH-WJbNC' });
+const venikmansPhoneNumber = '+16173966907';
+const token = 'XVYmO6ZbSVvZOUkdZolAf5xXppdcNwZz5KOL2UIbSPrOA6IY94dGy79aNH-WJbNC';
+const lib = require('lib')({ token });
 
-const sms = lib.venikman.sms['@dev'];
+const sms = lib.venikman.sms['@dev'].main;
 
 meow(`
 Usage
@@ -19,7 +21,7 @@ const start = async () => {
         type    : 'select',
         name    : 'answer',
         message : chalk.green('Hi! I am venikman.'),
-        choices : [...['Here is my website', 'Here is my twitter', 'Here is my github', 'Use stdlib FAAS', 'Send me SMS'].map((choise) => {
+        choices : [...['Here is my website', 'Here is my twitter', 'Here is my github', 'Send me SMS 1'].map((choise) => {
             return chalk.red(choise);
         }), 'Quit']
     };
@@ -38,10 +40,6 @@ start().then(async (res) => {
     if (res.answer.includes('website')) {
         opn('https://nedbailov.com');
     }
-    if (res.answer.includes('FAAS')) {
-        const stdlib = await lib.venikman.sms['@dev']({ name : 'testName' });
-        console.log(stdlib);
-    }
     if (res.answer.includes('SMS')) {
         const smsForm = {
             name    : 'form',
@@ -59,10 +57,11 @@ start().then(async (res) => {
         const answer = await enquirer.prompt(smsForm);
         const { name, message } = answer.form;
         try {
-            const re = await sms(name, message);
+            const re = await sms(name, message, venikmansPhoneNumber, token);
             console.log(re);
         }
         catch (error) {
+            console.log('this is err', error);
             console.log('We got problem to send a Message.');
         }
     }
