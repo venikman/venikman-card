@@ -9,7 +9,7 @@ const venikmansPhoneNumber = '+16173966907';
 const token = 'XVYmO6ZbSVvZOUkdZolAf5xXppdcNwZz5KOL2UIbSPrOA6IY94dGy79aNH-WJbNC';
 const lib = require('lib')({ token });
 
-const sms = lib.venikman.sms['@dev'].main;
+const sms = lib.venikman.sendSms['@dev'].main;
 
 meow(`
 Usage
