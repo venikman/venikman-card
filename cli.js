@@ -29,7 +29,6 @@ const start = async () => {
     return answerChooseLinks;
 };
 
-// eslint-disable-next-line promise/prefer-await-to-then
 start().then(async (res) => {
     if (res.answer.includes('twitter')) {
         opn('https://twitter.com/venik_man');

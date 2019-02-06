@@ -1,4 +1,4 @@
-# venikman [![Build Status](https://travis-ci.org/venikman/venikman.svg?branch=master)](https://travis-ci.org/venikman/venikman)
+# venikman [![Build Status](https://travis-ci.org/venikman/venikman.svg?branch=master)](https://travis-ci.org/venikman/venikman) [![Greenkeeper badge](https://badges.greenkeeper.io/venikman/venikman.svg)](https://greenkeeper.io/)
 
 > CLI portfolio.
 
