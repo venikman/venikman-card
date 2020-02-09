@@ -38,7 +38,7 @@
         "opn": "^5.3.0"
     },
     "devDependencies": {
-        "ava": "^1.2.1",
+        "ava": "^3.3.0",
         "eslint-config-tidy": "^0.7.0",
         "xo": "^0.24.0"
     },
