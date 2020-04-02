@@ -31,7 +31,7 @@
         "cli.js"
     ],
     "dependencies": {
-        "chalk": "^3.0.0",
+        "chalk": "^4.0.0",
         "enquirer": "^2.1.1",
         "lib": "^4.0.0",
         "meow": "^5.0.0",
