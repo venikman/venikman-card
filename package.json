@@ -40,7 +40,7 @@
     "devDependencies": {
         "ava": "^1.2.1",
         "eslint-config-tidy": "^0.7.0",
-        "xo": "^0.24.0"
+        "xo": "^0.29.0"
     },
     "keywords": [
         "cli-app",
